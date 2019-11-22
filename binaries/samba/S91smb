@@ -1,0 +1,58 @@
+#!/bin/sh
+PATH='/bin:/sbin:/usr/bin:/usr/sbin:/opt/samba/bin:/opt/samba/sbin'
+LD_LIBRARY_PATH='/opt/samba/lib'
+export PATH
+export LD_LIBRARY_PATH
+
+[ -f /opt/samba/etc/smb.conf ] || exit 0
+
+start() {
+	printf "Starting SMB services: "
+	smbd -D -s /opt/samba/etc/smb.conf -l /var/log/
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+
+	printf "Starting NMB services: "
+	nmbd -D -s /opt/samba/etc/smb.conf -l /var/log/
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+}
+
+stop() {
+	printf "Shutting down SMB services: "
+	kill -9 `pidof smbd`
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+
+	printf "Shutting down NMB services: "
+	kill -9 `pidof nmbd`
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+}
+
+restart() {
+	stop
+	start
+}
+
+reload() {
+        printf "Reloading smb.conf file: "
+	kill -HUP `pidof smbd`
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+}
+
+case "$1" in
+  start)
+  	start
+	;;
+  stop)
+  	stop
+	;;
+  restart)
+  	restart
+	;;
+  reload)
+  	reload
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart|reload}"
+	exit 1
+esac
+
+exit $?
