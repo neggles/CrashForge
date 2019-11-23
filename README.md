@@ -8,7 +8,7 @@ This is a set of scripts that you can use to unlock your FlashForge 3d Printer w
    
    The following services can be activated right now via this script, automatically.
 
-     * samba
+     * samba [To install, please check out the CrashForge-samba repo located here.](http://github.com/pressreset/Crashforge-samba "Samba Server for FlashForge 3d Printers")
      * open-sshd
      * busybox /w netcat
    
