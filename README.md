@@ -35,8 +35,8 @@ It works on my printer, but proceed at your own risk.
    You can now access your printer via ssh if you have enabled it.
 
    #### OTHER THINGS I'VE GOTTEN WORKING BUT CONTAIN BUGS
-   Original NES Emulation
-   Home-Assistant control
+   * Original NES Emulation
+   * Home-Assistant control
    
    #### THINGS THAT NEED TO BE FIXED
    There is a binary in the root directory of the main flash. This allows to print a file directly from the filesystem. It does not work correctly. I have a feeling that the QT instance which runs the print daemon does not allow the serial port to be taken over. I'll figure out a way around this eventually, but I have not had time to mess with this in a few months.
