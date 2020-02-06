@@ -1,6 +1,8 @@
 # CrashForge - Flashforge 3d Printer Unlocker
 This is a set of scripts that you can use to unlock your FlashForge 3d Printer which will allow you full access to the underlying Linux distribution.
-## THIS HAS ONLY BEEN TESTED ON THE Flashforge Creator 3
+## THIS HAS ONLY BEEN TESTED ON Flashforge Creator 3
+It works on my printer, but proceed at your own risk.
+
 ## Installation Steps:
 1. Clone this repository or download these files as a .zip.
 2. Format a USB stick as FAT32.
@@ -31,3 +33,10 @@ This is a set of scripts that you can use to unlock your FlashForge 3d Printer w
    Power down your printer, plug in your printer to ethernet, or configure it via wifi.
 
    You can now access your printer via ssh if you have enabled it.
+
+   #### OTHER THINGS I'VE GOTTEN WORKING BUT CONTAIN BUGS
+   Original NES Emulation
+   Home-Assistant control
+   
+   #### THINGS THAT NEED TO BE FIXED
+   There is a binary in the root directory of the main flash. This allows to print a file directly from the filesystem. It does not work correctly. I have a feeling that the QT instance which runs the print daemon does not allow the serial port to be taken over. I'll figure out a way around this eventually, but I have not had time to mess with this in a few months.
