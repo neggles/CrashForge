@@ -13,7 +13,7 @@ It works on my printer, but proceed at your own risk.
 
      * samba [To install, please check out the CrashForge-samba repo located here.](http://github.com/pressreset/Crashforge-samba "Samba Server for FlashForge 3d Printers")
      * open-sshd
-     * busybox /w netcat
+     * full busybox /w netcat
    
    It can also change the root/ssh login password to the default, which is 12345.
 
