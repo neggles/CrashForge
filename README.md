@@ -18,9 +18,9 @@ It works on my printer, but proceed at your own risk.
    It can also change the root/ssh login password to the default, which is 12345.
 
 5. Turn your printer completely OFF.
-6. Unplug your printer, then turn the power switch off for 15 seconds.
+6. Unplug your printer, then turn the power switch ON for 15 seconds.
 7. Place the usb stick into the printer's front USB port.
-8. Turn on your printer and wait.
+8. Turn OFF the power switch and plug your printer back in. Turn on your printer and wait.
 
    Your printer will now boot from the USB stick.
    
