@@ -1,5 +1,8 @@
 # CrashForge - Flashforge 3d Printer Unlocker
 This is a set of scripts that you can use to unlock your FlashForge 3d Printer which will allow you full access to the underlying Linux distribution.
+
+* If you are going to help/update/change this repo, please fork it, so I can upstream pull requests and merge your changes.
+
 ## THIS HAS ONLY BEEN TESTED ON Flashforge Creator 3
 It works on my printer, but proceed at your own risk.
 
